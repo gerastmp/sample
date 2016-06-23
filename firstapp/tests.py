@@ -6,5 +6,5 @@ from django.test import TestCase
 class FirstAppTest(TestCase):
 
     def test_get(self):
-        resp = self.client.get('/index/')
+        resp = self.client.get('/')
         self.assertEquals(resp.status_code, 200)

@@ -5,6 +5,7 @@ machine:
 dependencies:
   post:
     - docker build -t $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/django-sample-webapp:$CIRCLE_SHA1 .
+    - docker push $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/django-sample-webapp:$CIRCLE_SHA1
 
 test:
   post:
